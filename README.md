@@ -13,25 +13,8 @@ An autonomous **Multi-Agent AI System** built with Python and the **Gemini API**
 
 ## 🏗️ Multi-Agent Architecture
 
-```mermaid
-graph LR
-    classDef input fill:#1f2937,stroke:#4b5563,color:#fff
-    classDef agent fill:#1e1b4b,stroke:#6366f1,color:#fff,stroke-width:2px
-    classDef tool fill:#064e3b,stroke:#10b981,color:#fff
-    classDef output fill:#4c1d95,stroke:#a855f7,color:#fff,stroke-width:2px
+<img width="1392" height="275" alt="Ekran Resmi 2026-08-11 23 03 30" src="https://github.com/user-attachments/assets/fd26f693-9b0d-4fab-88d2-5c3edef0b338" />
 
-    A[📄 Raw Credentials<br/>certifications.txt]:::input --> B[⚙️ Ingestion Agent]:::agent
-    
-    subgraph Pipeline [Multi-Agent Processing Engine]
-        B --> C[🧠 AI/ML Specialist Agent]:::agent
-        B --> D[📊 Data Science Agent]:::agent
-        C --> E[🎯 Skill Mapping Agent]:::agent
-        D --> E
-    end
-
-    E --> F[📝 LINKEDIN_SKILL_MAP.md]:::output
-    F --> G[🎨 Gamma Presentation]:::tool
-```
 
 ### Agent Roles:
 1. **Ingestion Agent:** Reads raw text exports and converts unformatted credential entries into structured JSON objects (extracting course name, issuer, date, and listed skills).
