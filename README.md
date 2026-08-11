@@ -13,28 +13,24 @@ An autonomous **Multi-Agent AI System** built with Python and the **Gemini API**
 
 ## 🏗️ Multi-Agent Architecture
 
-```
-             [ Raw Credentials (certifications.txt) ]
-                                │
-                                ▼
-                      [ Ingestion Agent ]
-         (Parses raw text into structured JSON format)
-                                │
-       ┌────────────────────────┴────────────────────────┐
-       ▼                                                 ▼
+```mermaid
+graph LR
+    classDef input fill:#1f2937,stroke:#4b5563,color:#fff
+    classDef agent fill:#1e1b4b,stroke:#6366f1,color:#fff,stroke-width:2px
+    classDef tool fill:#064e3b,stroke:#10b981,color:#fff
+    classDef output fill:#4c1d95,stroke:#a855f7,color:#fff,stroke-width:2px
 
-[ AI & ML Specialist Agent ]                      [ Data Science Specialist Agent ]
-(Filters Generative AI, LLMs,                     (Filters SQL, Statistics, Python,
-Deep Learning & Neural Networks)                   Data Analysis & Engineering)
-       │                                                 │
-       └────────────────────────┬────────────────────────┘
-                                ▼
-              [ LinkedIn Skill Mapping Agent ]
-       (Maps verified evidence to official LinkedIn skills)
-                                │
-                                ▼
-           [ Generated Report: LINKEDIN_SKILL_MAP.md ]
+    A[📄 Raw Credentials<br/>certifications.txt]:::input --> B[⚙️ Ingestion Agent]:::agent
+    
+    subgraph Pipeline [Multi-Agent Processing Engine]
+        B --> C[🧠 AI/ML Specialist Agent]:::agent
+        B --> D[📊 Data Science Agent]:::agent
+        C --> E[🎯 Skill Mapping Agent]:::agent
+        D --> E
+    end
 
+    E --> F[📝 LINKEDIN_SKILL_MAP.md]:::output
+    F --> G[🎨 Gamma Presentation]:::tool
 ```
 
 ### Agent Roles:
