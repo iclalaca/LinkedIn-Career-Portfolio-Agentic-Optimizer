@@ -1,2 +1,102 @@
-# LinkedIn-Career-Portfolio-Agentic-Optimizer
-A Multi-Agent Python application using Gemini API to parse, structure, and optimize raw career/certificate data into an actionable LinkedIn Skill Taxonomy.
+```markdown
+# 🤖 Multi-Agent Career Portfolio & Skill Taxonomy Optimizer
+
+An autonomous **Multi-Agent AI System** built with Python and the **Gemini API** (`google-genai`). This tool ingests raw, unstructured career credentials (certifications, bootcamps, publications) and automatically categorizes, parses, and maps them into an actionable, search-optimized **LinkedIn Skill Taxonomy**.
+
+---
+
+## 🎯 Problem & Solution
+
+* **Problem:** As an active AI & Data Science scholar with 120+ certifications and multiple projects, unstructured credential data gets accumulated under broad tags (e.g., generic "AI" or "Data Science"), diluting specific technical domain visibility on professional platforms like LinkedIn.
+* **Solution:** Instead of manually sorting through hundreds of entries, this application leverages specialized **Gemini-powered Agents** working in a pipeline to structure, evaluate, and categorize credentials into granular sub-fields (*Generative AI, LLMs, Deep Learning, MLOps, SQL, Data Engineering*).
+
+---
+
+## 🏗️ Multi-Agent Architecture
+
+
+```
+
+```
+             [ Raw Credentials (certifications.txt) ]
+                                │
+                                ▼
+                      [ Ingestion Agent ]
+         (Parses raw text into structured JSON format)
+                                │
+       ┌────────────────────────┴────────────────────────┐
+       ▼                                                 ▼
+
+```
+
+[ AI & ML Specialist Agent ]                      [ Data Science Specialist Agent ]
+(Filters Generative AI, LLMs,                     (Filters SQL, Statistics, Python,
+Deep Learning & Neural Networks)                   Data Analysis & Engineering)
+│                                                 │
+└────────────────────────┬────────────────────────┘
+▼
+[ LinkedIn Skill Mapping Agent ]
+(Maps verified evidence to official LinkedIn skills)
+│
+▼
+[ Generated Report: LINKEDIN_SKILL_MAP.md ]
+
+```
+
+### Agent Roles:
+1. **Ingestion Agent:** Reads raw text exports and converts unformatted credential entries into structured JSON objects (extracting course name, issuer, date, and listed skills).
+2. **AI & ML Specialist Agent:** Evaluates entries against modern AI frameworks (Prompt Engineering, RAG, Transformers, Autoencoders, Classic ML).
+3. **Data Science Specialist Agent:** Analyzes analytics, database querying (SQL/MS SQL Server), and Python programming proficiency.
+4. **LinkedIn Skill Mapping Agent:** Generates an actionable markdown report mapping candidate credentials directly to LinkedIn search-optimized skill tags.
+
+---
+
+## 🛠️ Tech Stack & Tools
+
+* **Language:** Python 3.10+
+* **LLM Engine:** Google Gemini API (`gemini-3.1-flash-lite` with automated retry/fallback mechanisms)
+* **SDK:** `google-genai`
+* **Environment & Security:** `python-dotenv`, Replit Secrets / Environment Variables
+* **Visualization:** Gamma App (for presentation transformation)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+Clone the repository and install required dependencies:
+```bash
+git clone [https://github.com/iclalaca/LinkedIn-Career-Portfolio-Agentic-Optimizer.git](https://github.com/iclalaca/LinkedIn-Career-Portfolio-Agentic-Optimizer.git)
+cd LinkedIn-Career-Portfolio-Agentic-Optimizer
+pip install google-genai python-dotenv
+
+```
+
+### 2. Environment Setup
+
+Create a `.env` file in the root directory and add your Gemini API key:
+
+```env
+GEMINI_API_KEY=your_google_gemini_api_key_here
+
+```
+
+### 3. Usage
+
+Place your unformatted credential text into `certifications.txt` and run the pipeline:
+
+```bash
+python portfolio_optimizer.py
+
+```
+
+The optimized taxonomy report will be generated automatically as `LINKEDIN_SKILL_MAP.md`.
+
+---
+
+## 🔒 Security Note
+
+This project adheres to security best practices: API keys are loaded strictly from environment variables (`.env` or platform secrets) and are excluded from version control via `.gitignore`.
+
+```
+
