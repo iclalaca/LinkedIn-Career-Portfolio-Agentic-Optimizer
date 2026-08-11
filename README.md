@@ -1,4 +1,3 @@
-```markdown
 # 🤖 Multi-Agent Career Portfolio & Skill Taxonomy Optimizer
 
 An autonomous **Multi-Agent AI System** built with Python and the **Gemini API** (`google-genai`). This tool ingests raw, unstructured career credentials (certifications, bootcamps, publications) and automatically categorizes, parses, and maps them into an actionable, search-optimized **LinkedIn Skill Taxonomy**.
@@ -13,9 +12,6 @@ An autonomous **Multi-Agent AI System** built with Python and the **Gemini API**
 ---
 
 ## 🏗️ Multi-Agent Architecture
-
-
-```
 
 ```
              [ Raw Credentials (certifications.txt) ]
@@ -41,8 +37,6 @@ Deep Learning & Neural Networks)                   Data Analysis & Engineering)
 ▼
 [ Generated Report: LINKEDIN_SKILL_MAP.md ]
 
-```
-
 ### Agent Roles:
 1. **Ingestion Agent:** Reads raw text exports and converts unformatted credential entries into structured JSON objects (extracting course name, issuer, date, and listed skills).
 2. **AI & ML Specialist Agent:** Evaluates entries against modern AI frameworks (Prompt Engineering, RAG, Transformers, Autoencoders, Classic ML).
@@ -66,22 +60,13 @@ Deep Learning & Neural Networks)                   Data Analysis & Engineering)
 ### 1. Prerequisites
 Clone the repository and install required dependencies:
 ```bash
-git clone [https://github.com/iclalaca/LinkedIn-Career-Portfolio-Agentic-Optimizer.git](https://github.com/iclalaca/LinkedIn-Career-Portfolio-Agentic-Optimizer.git)
+git clone [https://github.com/iclalaca/LinkedIn-Career-Portfolio-Agentic-Optimizer.git]
 cd LinkedIn-Career-Portfolio-Agentic-Optimizer
 pip install google-genai python-dotenv
 
 ```
 
-### 2. Environment Setup
-
-Create a `.env` file in the root directory and add your Gemini API key:
-
-```env
-GEMINI_API_KEY=your_google_gemini_api_key_here
-
-```
-
-### 3. Usage
+### 2. Usage
 
 Place your unformatted credential text into `certifications.txt` and run the pipeline:
 
@@ -98,5 +83,4 @@ The optimized taxonomy report will be generated automatically as `LINKEDIN_SKILL
 
 This project adheres to security best practices: API keys are loaded strictly from environment variables (`.env` or platform secrets) and are excluded from version control via `.gitignore`.
 
-```
 
