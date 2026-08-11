@@ -23,19 +23,19 @@ An autonomous **Multi-Agent AI System** built with Python and the **Gemini API**
        ┌────────────────────────┴────────────────────────┐
        ▼                                                 ▼
 
-```
-
 [ AI & ML Specialist Agent ]                      [ Data Science Specialist Agent ]
 (Filters Generative AI, LLMs,                     (Filters SQL, Statistics, Python,
 Deep Learning & Neural Networks)                   Data Analysis & Engineering)
-│                                                 │
-└────────────────────────┬────────────────────────┘
-▼
-[ LinkedIn Skill Mapping Agent ]
-(Maps verified evidence to official LinkedIn skills)
-│
-▼
-[ Generated Report: LINKEDIN_SKILL_MAP.md ]
+       │                                                 │
+       └────────────────────────┬────────────────────────┘
+                                ▼
+              [ LinkedIn Skill Mapping Agent ]
+       (Maps verified evidence to official LinkedIn skills)
+                                │
+                                ▼
+           [ Generated Report: LINKEDIN_SKILL_MAP.md ]
+
+```
 
 ### Agent Roles:
 1. **Ingestion Agent:** Reads raw text exports and converts unformatted credential entries into structured JSON objects (extracting course name, issuer, date, and listed skills).
